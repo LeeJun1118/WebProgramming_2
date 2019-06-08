@@ -65,7 +65,7 @@ public class BasicController {
     @GetMapping({"/profile/{idx}"})
     public String readP(@PathVariable Long idx, Model model){
         model.addAttribute("profile",profileService.findProfileByIdx(idx));
-        return "/profile/item";
+        return "profile/item";
     }
     @PostMapping("/profile/add")
     public String addP(Profile profile, Model model) {
