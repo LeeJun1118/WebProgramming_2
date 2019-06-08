@@ -59,9 +59,9 @@
         <tbody>
         <tr th:each="profile : ${profileList}">
             <td th:text="${profile.idx}"></td>
-            <td th:text="${profile.netWork}"></td>
+            <td> <a th:href=" @{'/profile/'+  ${profile.idx}} " th:text="${profile.netWork}"></a></td>
             <td th:text="${profile.userName}"></td>
-            <td> <a th:href=" @{'/profile/'+  ${profile.idx}} " th:text="${profile.url}"></a></td>
+            <td th:text="${profile.netWork}"></td>
             <td th:text="${profile.createDate} ? ${#temporals.format(profile.createDate,'YYYY-MM-dd hh:mm:ss')} : ${profile.createDate}"></td>
         </tr>
         </tbody>
